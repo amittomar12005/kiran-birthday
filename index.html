@@ -1,69 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Happy Birthday Kiran ❤️</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
 body{
-margin:0;
-background:linear-gradient(135deg,#09091a,#1b1038,#5a189a);
-color:white;
-font-family:Arial;
-text-align:center;
-overflow:hidden;
-}
-
-h1{
-font-size:45px;
-margin-top:60px;
-}
-
-h2{
-color:#ffd166;
-}
-
-button{
-padding:18px 35px;
-font-size:22px;
-border:none;
-border-radius:50px;
-background:#ff4d6d;
-color:white;
-cursor:pointer;
-margin-top:30px;
-}
-
-button:hover{
-transform:scale(1.05);
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#0b0f2b,#1b0d3b,#3d1b5c);
+    color:white;
+    text-align:center;
+    overflow:hidden;
 }
 
 .stars{
-position:fixed;
-width:100%;
-height:100%;
-background:url("https://www.transparenttextures.com/patterns/stardust.png");
-opacity:.4;
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-image:radial-gradient(white 1px, transparent 1px);
+    background-size:40px 40px;
+    animation:move 25s linear infinite;
+    opacity:.4;
 }
-</style>
 
-</head>
+@keyframes move{
+    from{transform:translateY(0);}
+    to{transform:translateY(40px);}
+}
 
-<body>
+.container{
+    margin-top:80px;
+}
 
-<div class="stars"></div>
+h1{
+    font-size:48px;
+}
 
-<h1>🎂 Happy Birthday Kiran ❤️</h1>
+h2{
+    color:#ffd6e7;
+}
 
-<h2>From ❤️ Amit Tomar</h2>
+button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    font-size:20px;
+    background:#ff4f8b;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
 
-<p>
-A beautiful surprise is waiting for you...
-</p>
-
-<button onclick="alert('Welcome Kiran ❤️')">
-🎁 Open My Gift
-</button>
-
-</body>
-</html>
+button:hover{
+    transform:scale(1.08);
+}
