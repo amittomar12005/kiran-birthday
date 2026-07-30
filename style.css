@@ -138,3 +138,18 @@ transform:translateY(-120px) scale(1.4);
 opacity:0;
 }
 }
+#slideshow{
+margin-top:30px;
+text-align:center;
+display:none;
+}
+
+#slide{
+width:280px;
+height:380px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid white;
+box-shadow:0 0 20px rgba(255,255,255,.5);
+transition:1s;
+}
