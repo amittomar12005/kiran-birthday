@@ -3,6 +3,7 @@ function openGift() {
 document.getElementById("giftBox").style.display = "none";
 
 document.getElementById("message").style.display = "block";
+ document.getElementById("cake").style.display = "block";
  i = 0;
 document.getElementById("typingText").innerHTML = "";
 typeText();   
