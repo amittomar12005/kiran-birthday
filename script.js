@@ -3,7 +3,8 @@ function openGift() {
 document.getElementById("giftBox").style.display = "none";
 
 document.getElementById("message").style.display = "block";
-
+const music = document.getElementById("bgMusic");
+music.play();
 }
 
 function showLetter() {
