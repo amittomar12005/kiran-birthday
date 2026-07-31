@@ -78,7 +78,8 @@ openGift = function(){
 oldOpenGift();
 
 startSlideshow();
-
+count = 3;
+startCountdown();
 };
 const canvas = document.getElementById("fireworks");
 const ctx = canvas.getContext("2d");
@@ -173,3 +174,18 @@ function createStar() {
 }
 
 setInterval(createStar, 500);
+let count = 3;
+
+function startCountdown() {
+    const box = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+        if (count > 0) {
+            box.innerHTML = "🎉 Celebration starts in...<br><br>" + count;
+            count--;
+        } else {
+            box.innerHTML = "🎊 Happy Birthday Kiran! 🎊";
+            clearInterval(timer);
+        }
+    }, 1000);
+}
