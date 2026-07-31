@@ -3,6 +3,9 @@ function openGift() {
 document.getElementById("giftBox").style.display = "none";
 
 document.getElementById("message").style.display = "block";
+ i = 0;
+document.getElementById("typingText").innerHTML = "";
+typeText();   
 const music = document.getElementById("bgMusic");
 music.play();
 }
@@ -129,3 +132,13 @@ window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
+const text = "Happy Birthday Kiran ❤️";
+let i = 0;
+
+function typeText() {
+    if (i < text.length) {
+        document.getElementById("typingText").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeText, 100);
+    }
+}
