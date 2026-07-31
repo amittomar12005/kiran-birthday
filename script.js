@@ -208,3 +208,18 @@ function createConfetti() {
 }
 
 setInterval(createConfetti, 150);
+document.addEventListener("touchstart", function(e) {
+    const heart = document.createElement("div");
+
+    heart.className = "touchHeart";
+    heart.innerHTML = "❤️";
+
+    heart.style.left = e.touches[0].clientX + "px";
+    heart.style.top = e.touches[0].clientY + "px";
+
+    document.getElementById("touchEffect").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 1000);
+});
