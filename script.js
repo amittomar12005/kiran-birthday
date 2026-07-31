@@ -158,3 +158,18 @@ function createBalloon() {
 }
 
 setInterval(createBalloon, 700);
+function createStar() {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.innerHTML = "✨";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+    document.getElementById("stars").appendChild(star);
+
+    setTimeout(() => {
+        star.remove();
+    }, 7000);
+}
+
+setInterval(createStar, 500);
