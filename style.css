@@ -255,3 +255,29 @@ transform:translateY(110vh) rotate(720deg);
 transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale(1.02);
 box-shadow: 0 25px 50px rgba(0,0,0,0.5);
 }
+#touchEffect{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.touchHeart{
+position:absolute;
+font-size:30px;
+animation:touchPop 1s ease-out forwards;
+}
+
+@keyframes touchPop{
+0%{
+transform:scale(0);
+opacity:1;
+}
+100%{
+transform:translateY(-80px) scale(2);
+opacity:0;
+}
+}
