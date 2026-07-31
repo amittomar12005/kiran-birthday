@@ -189,3 +189,22 @@ function startCountdown() {
         }
     }, 1000);
 }
+function createConfetti() {
+    const confetti = document.createElement("div");
+    confetti.className = "confetti";
+
+    const colors = ["red","blue","yellow","green","pink","orange","purple"];
+
+    confetti.style.background =
+        colors[Math.floor(Math.random() * colors.length)];
+
+    confetti.style.left = Math.random() * 100 + "vw";
+
+    document.getElementById("confetti").appendChild(confetti);
+
+    setTimeout(() => {
+        confetti.remove();
+    }, 5000);
+}
+
+setInterval(createConfetti, 150);
