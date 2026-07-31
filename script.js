@@ -143,3 +143,18 @@ function typeText() {
         setTimeout(typeText, 100);
     }
 }
+function createBalloon() {
+    const balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.innerHTML = "🎈";
+    balloon.style.left = Math.random() * 100 + "vw";
+    balloon.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.getElementById("balloons").appendChild(balloon);
+
+    setTimeout(() => {
+        balloon.remove();
+    }, 10000);
+}
+
+setInterval(createBalloon, 700);
